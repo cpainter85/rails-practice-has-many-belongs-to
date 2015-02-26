@@ -1,0 +1,14 @@
+.page-header
+  %h1 Toys!
+
+%table.table
+  %thead
+    %tr
+      %th Toy Name
+      %th Cat
+  %tbody
+    -@toys.each do |toy|
+      %tr
+        %td=link_to toy.name, toy_path(toy)
+        %td
+          %em Replace this with a link to the cat who owns this toy
